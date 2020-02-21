@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <script src="minimax.js"></script>
+  <!--<script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://d3js.org/d3-hierarchy.v1.min.js"></script>-->
+  <!--<script src="https://d3js.org/d3-hierarchy.v1.min.js"></script>-->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="playwithme.css">
+</head>
+
+<body>
+  <h1>Play with me</h1>
+  Game:
+  <select id="gamesel">
+    <option value="tictactoe">TicTacToe</option>
+  </select>
+
+  <div id="content">
+    <div>
+      <input type="checkbox" onclick="userstate.computermove(); userstate.updatedivs();" id="xiscomputer"> the computer plays X<br>
+      <input type="checkbox" onclick="userstate.computermove(); userstate.updatedivs();" id="oiscomputer" checked> the computer plays O
+    </div>
+    <div>
+      <div id="game"></div>
+    </div>
+    <div>
+      Algorithm:
+      <select id="algosel">
+        <option value="minimax">minimax</option>
+      </select>
+      <svg id="tree"></svg>
+    </div>
+  </div>
+</body>
+
+</html>
